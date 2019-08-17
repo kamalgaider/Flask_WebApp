@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang = "en" dir = "ltr">
+	<head>
+		<meta charset = "utf-8">
+		<title>Book search app</title>
+	</head>
+	<body>
+		<header>
+			<div>
+				<h1>Select action to perform</h1>
+				<strong>
+					<nav>
+						<ul>
+							<li><a href ="{{ url_for('home')}}">SearchBook</a></li>
+							<li><a href ="{{ url_for('page')}}">FetchBookList</a></li>
+						</ul>
+					</nav>
+				</strong>
+			</div>
+		</header>
+		<hr>
+		{% block content %}<!-- Jinja syntax -->
+		{% endblock %}
+	</body>
+</html>

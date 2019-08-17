@@ -1,0 +1,42 @@
+<head>
+	<title>Search a book</title>
+</head>
+<body>
+	{% extends "template.html" %}
+	{% block content %}
+	
+	<form action = "/"	method = "POST">
+
+
+	{% if title|length %}
+	<h1>Book Details</h1>
+		<table>
+			<tr>
+				<th>Title</th>
+				<th>Author</th>
+				<th>Genre</th>
+				<th>Pages</th>
+				<th>Rating</th>
+				<th>ISBN</th>
+			</tr>
+			<tr>
+				<td>{{ title }}</td>
+				<td>{{ author }}</td>
+				<td>{{ genre }}</td>
+				<td>{{ pages }}</td>
+				<td>{{ rating }}</td>
+				<td>{{ ISBN }}</td>
+			</tr>
+		</table>
+	<input type = "hidden" name = "bookname" id = "bookname">
+	<input type = "submit" value = "Search again">
+	{% else %}
+		<h1>Search</h1>
+		<input type = "text" name = "bookname" id = "bookname">
+		<input type = "submit" value = "Search book">
+	{% endif %}
+	</form>
+
+	{% endblock %}
+</body>
+
