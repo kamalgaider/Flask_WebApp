@@ -2,18 +2,20 @@
 <html lang = "en" dir = "ltr">
 	<head>
 		<meta charset = "utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Book search app</title>
+		<link rel="stylesheet" href="{{ url_for('static',     filename='css/style.css') }}">
 	</head>
 	<body>
 		<header>
 			<div>
-				<h1>Select action to perform</h1>
+				<h1 class = "header">Book Search Application</h1>
 				<strong>
 					<nav>
-						<ul>
-							<li><a href ="{{ url_for('home')}}">SearchBook</a></li>
-							<li><a href ="{{ url_for('page')}}">FetchBookList</a></li>
-						</ul>
+						<div class = "topnav">
+							<a href ="{{ url_for('home')}}">SearchBook</a>
+							<a href ="{{ url_for('page')}}">FetchBookList</a>
+						</div>
 					</nav>
 				</strong>
 			</div>
